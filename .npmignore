@@ -1,0 +1,6 @@
+docs
+hooks
+node_modules
+.gitignore
+rollup.config.js
+tsconfig.json
