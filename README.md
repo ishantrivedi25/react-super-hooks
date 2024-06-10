@@ -33,6 +33,12 @@ To use these custom hooks, import them by name from the library. Here is a quick
 import { useFetch, usePrevious, useToggle } from "react-super-hooks";
 ```
 
+## 💻 Demo
+
+Check out the live demo here: [CodeSandbox](https://codesandbox.io/p/github/ishantrivedi25/react-super-hooks-demo/master)
+
+Check out the repository for the demo here: [Github](https://github.com/ishantrivedi25/react-super-hooks-demo)
+
 ## 📄 Documentation
 
 For documentation, examples and other details please refer [Documentation](https://github.com/ishantrivedi25/react-super-hooks/tree/master/docs)
