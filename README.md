@@ -14,6 +14,10 @@ npm i react-super-hooks
 - [useFetch](https://github.com/ishantrivedi25/react-super-hooks/tree/master/docs#usefetch): Manages data fetching within components
 - [usePrevious](https://github.com/ishantrivedi25/react-super-hooks/tree/master/docs#useprevious): Tracks the previous value of a state
 - [useToggle](https://github.com/ishantrivedi25/react-super-hooks/tree/master/docs#usetoggle): Handles boolean state toggling in components
+- [useForm](https://github.com/ishantrivedi25/react-super-hooks/tree/master/docs#useform): Simplifies form state management
+- [useHover](https://github.com/ishantrivedi25/react-super-hooks/tree/master/docs#usehover): Detects whether an element is being hovered over
+- [useUpdateEffect](https://github.com/ishantrivedi25/react-super-hooks/tree/master/docs#useupdateeffect): Executes an effect only after the first render
+- [useOnClickOutside](https://github.com/ishantrivedi25/react-super-hooks/tree/master/docs#useonclickoutside): Detects clicks that occur outside a specified element
 
 ## ✨ Features
 
