@@ -11,9 +11,9 @@ npm i react-super-hooks
 
 ## ✅ Available Hooks
 
-- [useFetch](https://github.com/ishantrivedi25/react-super-hooks/tree/main/docs#-usefetch): Manages data fetching within components
-- [usePrevious](https://github.com/ishantrivedi25/react-super-hooks/tree/main/docs#-useprevious): Tracks the previous value of a state
-- [useToggle](https://github.com/ishantrivedi25/react-super-hooks/tree/main/docs#-usetoggle): Handles boolean state toggling in components
+- [useFetch](https://github.com/ishantrivedi25/react-super-hooks/tree/master/docs#usefetch): Manages data fetching within components
+- [usePrevious](https://github.com/ishantrivedi25/react-super-hooks/tree/master/docs#useprevious): Tracks the previous value of a state
+- [useToggle](https://github.com/ishantrivedi25/react-super-hooks/tree/master/docs#usetoggle): Handles boolean state toggling in components
 
 ## ✨ Features
 
@@ -31,7 +31,7 @@ import { useFetch, usePrevious, useToggle } from "react-super-hooks";
 
 ## 📄 Documentation
 
-For documentation, examples and other details please refer [Documentation](https://github.com/ishantrivedi25/react-super-hooks/tree/main/docs)
+For documentation, examples and other details please refer [Documentation](https://github.com/ishantrivedi25/react-super-hooks/tree/master/docs)
 
 ## 🌐 License
 

@@ -2,9 +2,9 @@
 
 ## Index
 
-- [useFetch](#-usefetch)
-- [useToggle](#-usetoggle)
-- [usePrevious](#-useprevious)
+- [useFetch](#usefetch)
+- [useToggle](#usetoggle)
+- [usePrevious](#useprevious)
 
 ## useFetch
 
