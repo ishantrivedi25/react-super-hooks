@@ -191,6 +191,8 @@ export default FormComponent;
 2. `handleChange` (_function_): A function to handle changes to the form fields. This function updates the corresponding field value in the values object.
 3. `handleSubmit` (_function_): A function to handle form submission.
 
+</br>
+
 ## useHover
 
 Detects whether an element is being hovered over
@@ -222,6 +224,8 @@ The `useHover` hook does not accept any parameters
 
 1. `hoverRef ` (_ref_): A ref object that should be attached to the element you want to monitor for hover events.
 2. `isHovering` (_boolean_): A boolean value indicating whether the mouse is currently hovering over the specified element.
+
+</br>
 
 ## useUpdateEffect
 
@@ -259,6 +263,8 @@ export default UpdateEffectComponent;
 ### Return value
 
 The `useUpdateEffect` hook does not return any value.
+
+</br>
 
 ## useOnClickOutside
 
@@ -304,5 +310,224 @@ export default ClickOutSideComponent;
 ### Return value
 
 The `useOnClickOutside` hook does not return any value.
+
+</br>
+
+## useDebounce
+
+delays the update of a value until after a specified delay
+
+### Usage
+
+```jsx
+import React, { useState, useEffect } from "react";
+import { useDebounce } from "react-super-hooks";
+
+const DebounceComponent = () => {
+  const [query, setQuery] = useState("");
+  const debouncedQuery = useDebounce(query, 1500);
+
+  useEffect(() => {
+    if (debouncedQuery) {
+      console.log(`Search query: ${debouncedQuery}`);
+    }
+  }, [debouncedQuery]);
+
+  const handleInputChange = (event) => {
+    setQuery(event.target.value);
+  };
+
+  return (
+    <div className="wrapper">
+      <input
+        type="text"
+        value={query}
+        onChange={handleInputChange}
+        placeholder="Type to search..."
+      />
+      <p>Current query: {query}</p>
+      <p>Debounced query: {debouncedQuery}</p>
+    </div>
+  );
+};
+
+export default DebounceComponent;
+```
+
+### Parameters
+
+1. `value` (_any_): The value to be debounced.
+2. `delay` (_number_): The delay in milliseconds before updating the debounced value.
+
+### Return value
+
+1. `value` (_any_): The debounced value of the input value after the specified delay.
+
+</br>
+
+## useScript
+
+Dynamically loads and manages external scripts
+
+### Usage
+
+```jsx
+import React, { useState } from "react";
+import { useScript } from "react-super-hooks";
+
+const items = ["React", "Angular", "Vue", "Svelte", "Ember"];
+
+const ScriptComponent = () => {
+  const { loading, error } = useScript(
+    "https://cdn.jsdelivr.net/npm/lodash@4.17.21/lodash.min.js"
+  );
+
+  const [shuffledArray, setShuffledArray] = useState(items);
+
+  const shuffleItems = () => {
+    if (typeof window !== "undefined" && window?._) {
+      setShuffledArray(window._.shuffle(items));
+    }
+  };
+
+  if (loading) return <p>Loading lodash...</p>;
+  if (error) return <p>Failed to load lodash</p>;
+
+  return (
+    <div className="wrapper">
+      <div>
+        <h2>Shuffled Items</h2>
+        <ul>
+          {shuffledArray.map((item, index) => (
+            <li key={index}>{item}</li>
+          ))}
+        </ul>
+        <button onClick={shuffleItems}>Shuffle</button>
+      </div>
+    </div>
+  );
+};
+
+export default ScriptComponent;
+```
+
+### Parameters
+
+1. `src` (_string_): The URL of the script to load.
+
+### Return value
+
+`{ isLoaded, isError }`
+
+1. `isLoaded` (_boolean_): Indicates whether the script has been successfully loaded.
+2. `isError` (_boolean_): Indicates whether an error occurred while loading the script.
+
+</br>
+
+## useLocalStorage & useSessionStorage
+
+Facilitates interaction with browser storage mechanisms such as localStorage and sessionStorage
+
+### Usage
+
+```jsx
+import React from "react";
+import { useSessionStorage, useLocalStorage } from "react-super-hooks";
+
+const StorageComponent = () => {
+  const [name, setName, removeName] = useSessionStorage("name", "");
+  const [favoriteColor, setFavoriteColor, removeFavoriteColor] =
+    useLocalStorage("favoriteColor", "");
+
+  const handleNameChange = (event) => {
+    setName(event.target.value);
+  };
+
+  const handleColorChange = (event) => {
+    setFavoriteColor(event.target.value);
+  };
+
+  return (
+    <div className="wrapper">
+      <div className="form">
+        <div className="form-group">
+          <label htmlFor="name">Name:</label>&ensp;
+          <input type="text" value={name || ""} onChange={handleNameChange} />
+        </div>
+        <div className="form-group">
+          <label htmlFor="color">Favorite Color:</label>&ensp;
+          <input
+            type="text"
+            value={favoriteColor || ""}
+            onChange={handleColorChange}
+          />
+        </div>
+      </div>
+      <div className="output">
+        <p>
+          <strong>Name:</strong> {name}
+        </p>
+        <p>
+          <strong>Favorite Color:</strong> {favoriteColor}
+        </p>
+        <button onClick={removeName}>Remove Name</button>&ensp;
+        <button onClick={removeFavoriteColor}>Remove Color</button>
+      </div>
+    </div>
+  );
+};
+
+export default StorageComponent;
+```
+
+### Parameters
+
+1. `key` (_string_): The key under which the value is stored in the storage.
+2. `defaultValue` (_any_): The default value to use if no value is found in the storage.
+
+### Return value
+
+`[value, setValue, removeValue]`
+
+1. `value` (_any_): The current value stored in the storage.
+2. `setValue` (_function_): A function to update the value stored in the storage.
+3. `removeValue` (_function_): A function to remove the value from the storage.
+
+</br>
+
+## useWindowSize
+
+Tracks the dimensions of the browser window
+
+### Usage
+
+```jsx
+import React from "react";
+import { useWindowSize } from "react-super-hooks";
+
+const WindowSizeComponent = () => {
+  const { width, height } = useWindowSize();
+
+  return (
+    <div className="wrapper">
+      <p>Window width: {width}px</p>
+      <p>Window height: {height}px</p>
+    </div>
+  );
+};
+
+export default WindowSizeComponent;
+```
+
+### Parameters
+
+The `useWindowSize` hook does not take any parameters.
+
+### Return value
+
+`{ width, height }`
+
+1. `width` (_number_): The current width of the browser window.
+2. `height` (_number_): The current height of the browser window.
 
 </br>
