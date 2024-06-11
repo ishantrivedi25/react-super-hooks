@@ -18,12 +18,17 @@ npm i react-super-hooks
 - [useHover](https://github.com/ishantrivedi25/react-super-hooks/tree/master/docs#usehover): Detects whether an element is being hovered over
 - [useUpdateEffect](https://github.com/ishantrivedi25/react-super-hooks/tree/master/docs#useupdateeffect): Executes an effect only after the first render
 - [useOnClickOutside](https://github.com/ishantrivedi25/react-super-hooks/tree/master/docs#useonclickoutside): Detects clicks that occur outside a specified element
+- [useDebounce](https://github.com/ishantrivedi25/react-super-hooks/tree/master/docs#usedebounce): Delays the update of a value until after a specified delay
+- [useScript](https://github.com/ishantrivedi25/react-super-hooks/tree/master/docs#usescript): Dynamically loads and manages external scripts
+- [useLocalStorage & useSessionStorage](https://github.com/ishantrivedi25/react-super-hooks/tree/master/docs#uselocalstorage): Facilitates interaction with browser storage mechanisms such as localStorage and sessionStorage
+- [useWindowSize](https://github.com/ishantrivedi25/react-super-hooks/tree/master/docs#usewindowsize): Tracks the dimensions of the browser window
 
 ## ✨ Features
 
 - **TypeScript Support**: Comprehensive TypeScript support ensures type safety and enhances the development experience.
 - **Lightweight**: Minimal footprint to ensure application remains fast and efficient.
 - **Easy Integration**: Simple and intuitive API for quick integration into your existing projects.
+- **SSR Compatibility**: Compatible with server-side rendering (SSR) for seamless integration into server-rendered applications.
 
 ## 🚀 Usage
 
