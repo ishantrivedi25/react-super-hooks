@@ -20,7 +20,7 @@ npm i react-super-hooks
 - [useOnClickOutside](https://github.com/ishantrivedi25/react-super-hooks/tree/master/docs#useonclickoutside): Detects clicks that occur outside a specified element
 - [useDebounce](https://github.com/ishantrivedi25/react-super-hooks/tree/master/docs#usedebounce): Delays the update of a value until after a specified delay
 - [useScript](https://github.com/ishantrivedi25/react-super-hooks/tree/master/docs#usescript): Dynamically loads and manages external scripts
-- [useLocalStorage & useSessionStorage](https://github.com/ishantrivedi25/react-super-hooks/tree/master/docs#uselocalstorage): Facilitates interaction with browser storage mechanisms such as localStorage and sessionStorage
+- [useLocalStorage & useSessionStorage](https://github.com/ishantrivedi25/react-super-hooks/tree/master/docs#uselocalstorage--usesessionstorage): Facilitates interaction with browser storage mechanisms such as localStorage and sessionStorage
 - [useWindowSize](https://github.com/ishantrivedi25/react-super-hooks/tree/master/docs#usewindowsize): Tracks the dimensions of the browser window
 
 ## ✨ Features

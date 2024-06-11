@@ -9,6 +9,10 @@
 - [useHover](#usehover)
 - [useUpdateEffect](#useupdateeffect)
 - [useOnClickOutside](#useonclickoutside)
+- [useDebounce](#usedebounce)
+- [useScript](#usescript)
+- [useLocalStorage & useSessionStorage](#uselocalstorage--usesessionstorage)
+- [useWindowSize](#usewindowsize)
 
 ## useFetch
 
