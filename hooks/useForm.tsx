@@ -1,16 +1,14 @@
-import { ChangeEvent, FormEvent, useState } from 'react';
+import { ChangeEvent, FormEvent, useState } from "react";
 
-interface FormValues {
-    [key: string]: string;
-};
+type FormValues = Record<string, string>;
 
 interface FormActions {
     handleChange: (event: ChangeEvent<HTMLInputElement>) => void;
     handleSubmit: (event?: FormEvent<HTMLFormElement>) => void;
     values: FormValues;
-};
+}
 
-const useForm = (initialValues:FormValues, callback: () => void): FormActions => {
+const useForm = (initialValues: FormValues, callback: () => void): FormActions => {
     const [values, setValues] = useState(initialValues);
 
     const handleSubmit = (event?: FormEvent<HTMLFormElement>) => {
@@ -23,7 +21,10 @@ const useForm = (initialValues:FormValues, callback: () => void): FormActions =>
 
     const handleChange = (event: ChangeEvent<HTMLInputElement>) => {
         event.persist();
-        setValues((values) => ({ ...values, [event.target.name]: event.target.value }));
+        setValues((values: FormValues) => ({
+            ...values,
+            [event.target.name]: event.target.value,
+        }));
     };
 
     return {
@@ -31,6 +32,6 @@ const useForm = (initialValues:FormValues, callback: () => void): FormActions =>
         handleSubmit,
         values,
     };
-}
+};
 
 export default useForm;

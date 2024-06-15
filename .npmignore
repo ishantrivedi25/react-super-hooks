@@ -1,6 +1,10 @@
 docs
-hooks
+/hooks
 node_modules
 .gitignore
 rollup.config.js
 tsconfig.json
+index.ts
+.eslintrc
+.prettierrc
+.vscode

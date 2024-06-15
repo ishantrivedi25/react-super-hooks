@@ -1,11 +1,14 @@
 import { RefObject, useEffect } from "react";
 
-const isClient = typeof window === 'object';
+const isClient = typeof window === "object";
 
-const useOnClickOutside = (ref:RefObject<HTMLElement> | undefined, handler:(event: MouseEvent | TouchEvent) => void) => {
+const useOnClickOutside = (
+    ref: RefObject<HTMLElement> | undefined,
+    handler: (event: MouseEvent | TouchEvent) => void,
+) => {
     useEffect(() => {
         if (!isClient) {
-            return; 
+            return;
         }
 
         const listener = (event: MouseEvent | TouchEvent) => {
@@ -24,6 +27,6 @@ const useOnClickOutside = (ref:RefObject<HTMLElement> | undefined, handler:(even
             document.removeEventListener("touchstart", listener);
         };
     }, [ref, handler]);
-}
+};
 
 export default useOnClickOutside;
