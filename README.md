@@ -42,7 +42,7 @@ import { useFetch, usePrevious, useToggle } from "react-super-hooks";
 
 ## 💻 Demo
 
-Check out the live demo here: [CodeSandbox](https://codesandbox.io/p/github/ishantrivedi25/react-super-hooks-demo/master)
+Check out the live demo here: [CodeSandbox](https://codesandbox.io/p/sandbox/github/ishantrivedi25/react-super-hooks-demo/tree/master/)
 
 Check out the repository for the demo here: [Github](https://github.com/ishantrivedi25/react-super-hooks-demo)
 
