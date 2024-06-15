@@ -1,6 +1,6 @@
 {
   "name": "react-super-hooks",
-  "version": "1.5.0",
+  "version": "1.5.1",
   "type": "module",
   "description": "A lightweight library of commonly used React custom hooks, written in TypeScript, designed to simplify and enhance your React projects.",
   "main": "dist/index.js",
