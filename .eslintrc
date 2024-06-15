@@ -1,0 +1,29 @@
+{
+    "parser": "@typescript-eslint/parser",
+    "parserOptions": {
+        "sourceType": "module",
+        "project": true
+    },
+    "plugins": [
+        "@typescript-eslint"
+    ],
+    "extends": [
+        "eslint:recommended",
+        "plugin:@typescript-eslint/recommended-type-checked",
+        "plugin:@typescript-eslint/stylistic-type-checked",
+        "plugin:react-hooks/recommended"
+    ],
+    "rules": {
+        "@typescript-eslint/no-empty-function": "off"
+    },
+    "env": {
+        "browser": true,
+        "node": true
+    },
+    "ignorePatterns": [
+        "**/node_modules/",
+        "**/dist/",
+        "**.config.js",
+        ".eslintrc"
+    ]
+}

@@ -3,11 +3,11 @@ import { useState, useEffect } from "react";
 interface ScriptStatus {
     isLoaded: boolean;
     isError: boolean;
-};
+}
 
-const isClient = typeof window === 'object';
+const isClient = typeof window === "object";
 
-const useScript = (src:string): ScriptStatus => {
+const useScript = (src: string): ScriptStatus => {
     const [isLoaded, setIsLoaded] = useState(false);
     const [isError, setIsError] = useState(false);
 
